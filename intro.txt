@@ -1,0 +1,29 @@
+////html
+<div id="p1"></div>
+<div id="p2"></div>
+<div id="p3"></div>
+///css
+.Person {
+  display:  inline-block;
+  margin:10px;
+    border:10px solid ;
+  width:200px;
+  padding:20px;
+}
+/////js
+function Person(props){
+  return(
+    <div className="Person">
+  <h1>
+  {props.name}
+  </h1>
+  <p>i am a {props.job}</p>
+</div>
+  );
+}
+
+
+
+ReactDOM.render(<Person name="damith" job="teacher"/>,document.querySelector('#p1'));
+ReactDOM.render(<Person name="dewinda" job="doctor"/>,document.querySelector('#p2'));
+ReactDOM.render(<Person name="gayan" job="farmer"/>,document.querySelector('#p3'));
